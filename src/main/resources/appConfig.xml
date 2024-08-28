@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--     <context:property-placeholder location="car.properties"/>-->
+
+
+    <!-- bean definitions here -->
+
+
+<!--    <bean id="greet" class="org.example.Greet">-->
+<!--        <property value="Hello bro " name="message"/>-->
+<!--    </bean>-->
+
+
+    <bean id="myVehicle" class="org.example.Bus">
+
+<!--        <constructor-arg ref="myDiscount"/>-->
+
+        <property name="discountService" ref="myDiscount"></property>
+        <property name="brandName" value="Honda"></property>
+        <property name="price" value="1000"></property>
+    </bean>
+    <bean id="myDiscount" class="org.example.FestivalDiscountService"></bean>
+
+</beans>
